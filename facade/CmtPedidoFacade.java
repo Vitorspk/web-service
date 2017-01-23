@@ -1,17 +1,17 @@
-package br.com.microdatasistemas.simintegrationws.facade;
+package facade;
 
 
-import br.com.microdatasistemas.simintegrationws.entity.CmtPedido;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntPurchase;
-import br.com.microdatasistemas.simintegrationws.factory.CmtPedidoFactory;
+import entity.CmtPedido;
+import entity.WsIntPurchase;
+import factory.CmtPedidoFactory;
 
-public class CmtPedidoFacade extends AbstractMicrodataFacade {
+public class CmtPedidoFacade extends AbstractFacade {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public <T, U> T save(T microdataEntity, U wsEntity) throws Exception {
+	public <T, U> T save(T Entity, U wsEntity) throws Exception {
 		// Check if the type of method arguments are the desired for this operation and assign to their correct reference.
-		CmtPedido purchaseFinal = (CmtPedido) this.checkAndReturnInstance(microdataEntity, CmtPedido.class);
+		CmtPedido purchaseFinal = (CmtPedido) this.checkAndReturnInstance(Entity, CmtPedido.class);
 		WsIntPurchase purchaseEspelho = (WsIntPurchase) this.checkAndReturnInstance(wsEntity, WsIntPurchase.class);
 		
 		purchaseFinal = new CmtPedidoFactory().executeCmtPedido(purchaseEspelho.getInfNumber());
