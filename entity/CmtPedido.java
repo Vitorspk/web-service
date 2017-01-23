@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.entity;
+package entity;
 
 import java.io.Serializable;
 
