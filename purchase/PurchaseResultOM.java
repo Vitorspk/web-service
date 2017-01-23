@@ -1,11 +1,11 @@
-package br.com.microdatasistemas.simintegrationws.xml.purchase;
+package xml.purchase;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import br.com.microdatasistemas.simintegrationws.xml.ResultOM;
+import xml.ResultOM;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "purchaseResult", namespace = "http://tempuri.org/")
