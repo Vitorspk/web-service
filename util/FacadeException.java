@@ -1,7 +1,7 @@
-package br.com.microdatasistemas.simintegrationws.util;
+package util;
 
 
-public class FacadeException extends MicrodataException {
+public class FacadeException extends Exception {
     private static final long serialVersionUID = 2375907122629391431L;
     
     public FacadeException(Throwable e) {
