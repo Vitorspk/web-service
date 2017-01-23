@@ -1,7 +1,6 @@
-package br.com.microdatasistemas.simintegrationws.util;
+package util;
 
-import br.com.microdata.component.util.PersistenceMicrodataException;
-import br.com.microdatasistemas.simintegrationws.entity.EnderecoSped;
+import util.PersistenceException;
 
 public class EnderecoUtil {
     private EnderecoSummary fatEnd = new EnderecoSummary();
@@ -9,7 +8,7 @@ public class EnderecoUtil {
     private EnderecoSummary entEnd = new EnderecoSummary();
     private EnderecoSped endereco;
 
-    public void fillAddresses(EnderecoSped endSped) throws PersistenceMicrodataException {
+    public void fillAddresses(EnderecoSped endSped) throws PersistenceException {
 	this.endereco = endSped;
 
 	this.fillFatEnd(endSped);
@@ -35,7 +34,7 @@ public class EnderecoUtil {
 	fatEnd.setCep(Util.getFormattedCEP(address.getFatCep()));
     }
 
-    private void fillCobEnd(EnderecoSped address) throws PersistenceMicrodataException {
+    private void fillCobEnd(EnderecoSped address) throws PersistenceException {
 	cobEnd.setEndereco(address.getCobEndereco());
 	cobEnd.setNumero(address.getCobNumero());
 	cobEnd.setComplemento(Util.truncate(address.getCobComplemento(), 60));
@@ -43,7 +42,7 @@ public class EnderecoUtil {
 	cobEnd.setCep(Util.getFormattedCEP(address.getCobCep()));
     }
 
-    private void fillEntEnd(EnderecoSped address) throws PersistenceMicrodataException {
+    private void fillEntEnd(EnderecoSped address) throws PersistenceException {
 	entEnd.setEndereco(address.getEntEndereco());
 	entEnd.setNumero(address.getEntNumero());
 	entEnd.setComplemento(Util.truncate(address.getEntComplemento(), 60));
