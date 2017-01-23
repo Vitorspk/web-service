@@ -1,16 +1,15 @@
-package br.com.microdatasistemas.simintegrationws.impl;
+package impl;
 
 import org.apache.axiom.om.OMElement;
 
-import br.com.microdatasistemas.simintegrationws.entity.CmtPedido;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntPurchase;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntRequest;
-import br.com.microdatasistemas.simintegrationws.facade.CmtPedidoFacade;
-import br.com.microdatasistemas.simintegrationws.facade.PurchaseFacade;
-import br.com.microdatasistemas.simintegrationws.facade.RequestFacade;
-import br.com.microdatasistemas.simintegrationws.intf.PurchaseIntf;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.PurchaseOM;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.PurchaseResultOM;
+import entity.CmtPedido;
+import entity.WsIntPurchase;
+import facade.CmtPedidoFacade;
+import facade.PurchaseFacade;
+import facade.RequestFacade;
+import intf.PurchaseIntf;
+import xml.purchase.PurchaseOM;
+import xml.purchase.PurchaseResultOM;
 
 public class PurchaseImpl extends AbstractImpl implements PurchaseIntf {
 
