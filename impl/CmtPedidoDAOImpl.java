@@ -1,16 +1,16 @@
-package br.com.microdatasistemas.simintegrationws.dao.impl;
+package dao.impl;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import br.com.microdata.component.persistence.FactoryHibernate;
-import br.com.microdatasistemas.simintegrationws.dao.CmtPedidoDAO;
-import br.com.microdatasistemas.simintegrationws.entity.CmtPedido;
-import br.com.microdatasistemas.simintegrationws.util.PersistenceMicrodataException;
+import FactoryHibernate;
+import dao.CmtPedidoDAO;
+import entity.CmtPedido;
+import util.PersistenceMicrodataException;
 
 public class CmtPedidoDAOImpl implements CmtPedidoDAO{
 
-	public CmtPedido executeCmtPedido(String pedido) throws PersistenceMicrodataException {
+	public CmtPedido executeCmtPedido(String pedido) throws PersistenceException {
 		Session session = (Session) FactoryHibernate.getInstance().getEntityManager().getDelegate();
 		String queryString = "exec SP_Ws_Int_Gera_Cmt_Pedido :pedido";
 		Transaction t = null;
@@ -30,7 +30,7 @@ public class CmtPedidoDAOImpl implements CmtPedidoDAO{
 		    if(t != null) {
 			t.rollback();
 		    }
-		    throw new PersistenceMicrodataException(PersistenceMicrodataException.getCause(e));
+		    throw new PersistenceException(PersistenceException.getCause(e));
 		}
 		return cmtPedido;
 	    }
