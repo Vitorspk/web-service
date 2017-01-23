@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.xml.purchase;
+package xml.purchase;
 
 import java.util.List;
 
