@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.xml.purchase;
+package xml.purchase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import br.com.microdatasistemas.simintegrationws.xml.purchase.DetOM;
+import xml.purchase.DetOM;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "purchase"/* , namespace = "" */)
