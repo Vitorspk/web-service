@@ -1,9 +1,9 @@
 package dao;
 
-import br.com.microdatasistemas.simintegrationws.entity.CmtPedido;
-import br.com.microdatasistemas.simintegrationws.util.PersistenceMicrodataException;
+import entity.CmtPedido;
+import util.PersistenceException;
 
 public interface CmtPedidoDAO {
-	public CmtPedido executeCmtPedido(String pedido) throws PersistenceMicrodataException;
+	public CmtPedido executeCmtPedido(String pedido) throws PersistenceException;
 
 }
