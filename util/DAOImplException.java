@@ -1,6 +1,6 @@
-package br.com.microdatasistemas.simintegrationws.util;
+package util;
 
-public class DAOImplException extends MicrodataException {
+public class DAOImplException extends Exception {
     private static final long serialVersionUID = -5904730204388981136L;
     
     public DAOImplException(Throwable e) {
