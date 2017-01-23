@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.facade;
+package facade;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -6,24 +6,24 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
-import br.com.microdatasistemas.simintegrationws.constants.Constants;
-import br.com.microdatasistemas.simintegrationws.entity.Clientes_Principal;
-import br.com.microdatasistemas.simintegrationws.entity.CondicoesPagto;
-import br.com.microdatasistemas.simintegrationws.entity.ProdutosCodConcatEFDPK;
-import br.com.microdatasistemas.simintegrationws.entity.RetUnidades;
-import br.com.microdatasistemas.simintegrationws.entity.Transportadora;
-import br.com.microdatasistemas.simintegrationws.entity.VwContSPEDExpCCusto;
-import br.com.microdatasistemas.simintegrationws.entity.VwContSPEDExpDeptoCCusto;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntItemPurchase;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntPurchase;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntPurchaseProdAccounting;
-import br.com.microdatasistemas.simintegrationws.entity.WsIntRelationship;
-import br.com.microdatasistemas.simintegrationws.factory.ProdutosFactory;
-import br.com.microdatasistemas.simintegrationws.util.Util;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.AccountingOM;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.DetOM;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.PurchaseOM;
-import br.com.microdatasistemas.simintegrationws.xml.purchase.PurchaseResultOM;
+import constants.Constants;
+import entity.Clientes_Principal;
+import entity.CondicoesPagto;
+import entity.ProdutosCodConcatEFDPK;
+import entity.RetUnidades;
+import entity.Transportadora;
+import entity.VwContSPEDExpCCusto;
+import entity.VwContSPEDExpDeptoCCusto;
+import entity.WsIntItemPurchase;
+import entity.WsIntPurchase;
+import entity.WsIntPurchaseProdAccounting;
+import entity.WsIntRelationship;
+import factory.ProdutosFactory;
+import util.Util;
+import xml.purchase.AccountingOM;
+import .xml.purchase.DetOM;
+import xml.purchase.PurchaseOM;
+import xml.purchase.PurchaseResultOM;
 
 public class PurchaseFacade extends AbstractWsFacade {
 
