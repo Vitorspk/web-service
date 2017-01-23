@@ -1,12 +1,12 @@
-package br.com.microdatasistemas.simintegrationws.factory;
+package factory;
 
 
-import br.com.microdatasistemas.simintegrationws.dao.impl.RetAvisoRecebimentoDAOImpl;
-import br.com.microdatasistemas.simintegrationws.entity.RetAvisoRecebimento;
-import br.com.microdatasistemas.simintegrationws.util.PersistenceMicrodataException;
+import dao.impl.RetAvisoRecebimentoDAOImpl;
+import entity.RetAvisoRecebimento;
+import util.PersistenceMicrodataException;
 
 public class RetAvisoRecebimentoFactory {
-	public RetAvisoRecebimento executeRetAvisoRecebimento(String aviso) throws PersistenceMicrodataException {
+	public RetAvisoRecebimento executeRetAvisoRecebimento(String aviso) throws PersistenceException {
 		return new RetAvisoRecebimentoDAOImpl().executeRetAvisoRecebimento(aviso);
 	    }
 
