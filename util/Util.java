@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.util;
+package util;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -115,19 +115,19 @@ public class Util {
 
     public static String cleanCharacters(String value) {
 	if (!isEmpty(value)) {
-	    return value.replace(".", "").replace("-", "").replace("/", "").replace("+", "").replace("(", "").replace(")", "").replace(" ", "").replace("∫", "").replace("™", "");
+	    return value.replace(".", "").replace("-", "").replace("/", "").replace("+", "").replace("(", "").replace(")", "").replace(" ", "").replace("¬∫", "").replace("¬™", "");
 	}
 	return value;
     }
     
     public static String cleanAccentuation(String value) {
 	if(!isEmpty(value)) {
-	    return value.replace("«", "C").replace("Á", "c")
-		.replace("¡", "A").replace("·", "a").replace("¿", "A").replace("‡", "a").replace("√", "A").replace("„", "a")
-		.replace("…", "E").replace("È", "e").replace(" ", "E").replace("Í", "e")
-		.replace("Õ", "I").replace("Ì", "i")
-		.replace("”", "O").replace("Û", "o").replace("‘", "O").replace("Ù", "o").replace("’", "O").replace("ı", "o")
-		.replace("⁄", "U").replace("˙", "u");
+	    return value.replace("√á", "C").replace("√ß", "c")
+		.replace("√Å", "A").replace("√°", "a").replace("√Ä", "A").replace("√†", "a").replace("√É", "A").replace("√£", "a")
+		.replace("√â", "E").replace("√©", "e").replace("√ä", "E").replace("√™", "e")
+		.replace("√ç", "I").replace("√≠", "i")
+		.replace("√ì", "O").replace("√≥", "o").replace("√î", "O").replace("√¥", "o").replace("√ï", "O").replace("√µ", "o")
+		.replace("√ö", "U").replace("√∫", "u");
 	}
 	return value;
     }
@@ -226,10 +226,10 @@ public class Util {
 		d2 = d2 + (12 - nCount) * digitoCPF;
 	    }
 
-	    // Primeiro resto da divis„o por 11.
+	    // Primeiro resto da divis√£o por 11.
 	    resto = (d1 % 11);
 
-	    // Se o resultado for 0 ou 1 o digito È 0 caso contr·rio o digito È 11 menos o resultado anterior.
+	    // Se o resultado for 0 ou 1 o digito √© 0 caso contr√°rio o digito √© 11 menos o resultado anterior.
 	    if (resto < 2)
 		digito1 = 0;
 	    else
@@ -237,16 +237,16 @@ public class Util {
 
 	    d2 += 2 * digito1;
 
-	    // Segundo resto da divis„o por 11.
+	    // Segundo resto da divis√£o por 11.
 	    resto = (d2 % 11);
 
-	    // Se o resultado for 0 ou 1 o digito È 0 caso contr·rio o digito È 11 menos o resultado anterior.
+	    // Se o resultado for 0 ou 1 o digito √© 0 caso contr√°rio o digito √© 11 menos o resultado anterior.
 	    if (resto < 2)
 		digito2 = 0;
 	    else
 		digito2 = 11 - resto;
 
-	    // Digito verificador do CPF que est· sendo validado.
+	    // Digito verificador do CPF que est√° sendo validado.
 	    String nDigVerific = cpf.substring(cpf.length() - 2, cpf.length());
 
 	    // Concatenando o primeiro resto com o segundo.
