@@ -1,4 +1,4 @@
-package br.com.microdatasistemas.simintegrationws.dao;
+package dao;
 
 import br.com.microdatasistemas.simintegrationws.entity.CmtPedido;
 import br.com.microdatasistemas.simintegrationws.util.PersistenceMicrodataException;
