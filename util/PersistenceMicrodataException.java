@@ -1,17 +1,17 @@
-package br.com.microdatasistemas.simintegrationws.util;
+package util;
 
-public class PersistenceMicrodataException extends MicrodataException {
+public class PersistenceException extends Exception {
     private static final long serialVersionUID = 8664535931565819348L;
     
-    public PersistenceMicrodataException(Throwable e) {
+    public PersistenceException(Throwable e) {
 	super(e);
     }
 
-    public PersistenceMicrodataException(String message) {
+    public PersistenceException(String message) {
 	super(message);
     }
     
-    public PersistenceMicrodataException(String message, Throwable e) {
+    public PersistenceException(String message, Throwable e) {
 	super(message, e);
     }
 
