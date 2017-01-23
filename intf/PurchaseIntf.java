@@ -1,8 +1,8 @@
-package br.com.microdatasistemas.simintegrationws.intf;
+package intf;
 
 import org.apache.axiom.om.OMElement;
 
-import br.com.microdatasistemas.simintegrationws.xml.purchase.PurchaseResultOM;
+import xml.purchase.PurchaseResultOM;
 
 public interface PurchaseIntf {
 
