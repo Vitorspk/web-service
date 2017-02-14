@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import FactoryHibernate;
 import dao.CmtPedidoDAO;
 import entity.CmtPedido;
-import util.PersistenceMicrodataException;
+import util.PersistenceException;
 
 public class CmtPedidoDAOImpl implements CmtPedidoDAO{
 
