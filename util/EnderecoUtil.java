@@ -26,7 +26,7 @@ public class EnderecoUtil {
 	}
     }
 
-    private void fillFatEnd(EnderecoSped address) throws PersistenceMicrodataException {
+    private void fillFatEnd(EnderecoSped address) throws PersistenceException {
 	fatEnd.setEndereco(address.getFatEndereco());
 	fatEnd.setNumero(address.getFatNumero());
 	fatEnd.setComplemento(Util.truncate(address.getFatComplemento(), 60));
