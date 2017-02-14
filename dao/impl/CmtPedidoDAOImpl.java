@@ -3,7 +3,7 @@ package dao.impl;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import br.com.microdata.component.persistence.FactoryHibernate;
+import br.com.component.persistence.FactoryHibernate;
 import dao.CmtPedidoDAO;
 import entity.CmtPedido;
 import util.PersistenceException;
@@ -30,7 +30,7 @@ public class CmtPedidoDAOImpl implements CmtPedidoDAO{
 		    if(t != null) {
 			t.rollback();
 		    }
-		    throw new PersistenceMicrodataException(PersistenceException.getCause(e));
+		    throw new PersistenceException(PersistenceException.getCause(e));
 		}
 		return cmtPedido;
 	    }
